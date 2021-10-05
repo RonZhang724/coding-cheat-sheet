@@ -1,5 +1,5 @@
 def find_rotate_index(nums, left, right):
-    if nums[left] < nums[right]:
+    if left == right or nums[left] < nums[right]:
         return 0
 
     while left <= right:
@@ -14,4 +14,7 @@ def find_rotate_index(nums, left, right):
 
 
 arr = [1, 2, 3, 0]
+print(find_rotate_index(arr, 0, len(arr) - 1))
+
+arr = [1]
 print(find_rotate_index(arr, 0, len(arr) - 1))
